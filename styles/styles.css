@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--color-one);
+    background: #fff;
     min-height: 100vh;
     color: var(--color-five);
 }
@@ -26,12 +26,12 @@ body {
 }
 
 .header {
-    background: linear-gradient(180deg, var(--color-five) 0%, var(--color-four) 100%);
-    color: white;
+    background: var(--color-four);
+    color: var(--color-two);
     padding: 40px;
     border-radius: 16px;
     margin-bottom: 30px;
-    box-shadow: 0 10px 30px var(--color-two);
+    box-shadow: 0 4px 6px var(--color-two);
     text-align: center;
 }
 
@@ -43,50 +43,48 @@ body {
 
 .header p {
     font-size: 1.1rem;
-    opacity: 0.7;
-    font-weight: 300;
+    opacity: 0.8;
+    font-weight: 400;
 }
 
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 30px;
 }
 
 .stat-card {
-    background: white;
+    background: var(--color-one);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px var(--color-two);
     transition: all 0.3s ease;
 }
 
 .stat-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 10px var(--color-three);
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--color-five);
     margin-bottom: 5px;
 }
 
 .stat-label {
     font-size: 0.95rem;
-    color: #64748b;
+    color: var(--color-three);
     font-weight: 500;
 }
 
 .controls {
-    background: white;
+    background: var(--color-one);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px var(--color-two);
     margin-bottom: 30px;
 }
 
@@ -106,18 +104,18 @@ body {
 .search-input {
     width: 100%;
     padding: 12px 16px 12px 45px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--color-two);
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background: #f8fafc;
+    background: #fcfcfc;
 }
 
 .search-input:focus {
     outline: none;
-    border-color: #3b82f6;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--color-three);
+    background: #fff;
+    box-shadow: 0 0 0 1px var(--color-two);
 }
 
 .search-icon {
@@ -125,17 +123,16 @@ body {
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #64748b;
     font-size: 18px;
 }
 
 .filter-select {
     padding: 12px 16px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--color-two);
     border-radius: 8px;
     font-size: 16px;
-    background: white;
-    color: #334155;
+    background: fcfcfc;
+    color: var(--color-three);
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 150px;
@@ -143,8 +140,8 @@ body {
 
 .filter-select:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--color-two);
+    box-shadow: 0 0 0 1px var(--color-three);
 }
 
 .btn {
@@ -162,14 +159,14 @@ body {
 }
 
 .btn-primary {
-    background: #3b82f6;
-    color: white;
+    background: var(--color-four);
+    color: var(--color-one);
 }
 
 .btn-primary:hover {
-    background: #2563eb;
+    background: var(--color-five);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 12px var(--color-two);
 }
 
 .btn-success {
