@@ -10,6 +10,13 @@
     --color-three: #8C8C8C;
     --color-four: #404040;
     --color-five: #0D0D0D;
+    --color-success: #0ed395;
+    --color-success-secondary: #13c089;
+    --color-danger: #ee5353;
+    --color-danger-secondary: #dd4e4e;
+    --color-price: #2e7d32;
+    --color-alert: #f5b453;
+    --color-alert-secondary: #ff9800;
 }
 
 body {
@@ -170,36 +177,35 @@ body {
 }
 
 .btn-success {
-    background: #10b981;
-    color: white;
+    display: flex;
+    background: var(--color-success);
+    justify-content: center;
 }
 
 .btn-success:hover {
-    background: #059669;
+    background: var(--color-success-secondary);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .btn-danger {
-    background: #ef4444;
-    color: white;
+    background: var(--color-danger);
 }
 
 .btn-danger:hover {
-    background: #dc2626;
+    background: var(--color-danger-secondary);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
 
 .btn-outline {
-    background: transparent;
-    border: 2px solid #e2e8f0;
-    color: #64748b;
+    background: var(--color-four);
+    color: var(--color-one);
 }
 
 .btn-outline:hover {
-    background: #f8fafc;
-    border-color: #cbd5e1;
+    background: var(--color-three);
+    color: var(--color-five);
 }
 
 .btn-sm {
@@ -210,11 +216,11 @@ body {
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 25px;
+    gap: 15px;
 }
 
 .product-card {
-    background: white;
+    background: var(--color-one);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -235,27 +241,28 @@ body {
 }
 
 .product-content {
-    padding: 20px;
+    padding: 15px;
 }
 
 .product-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .product-title {
     font-size: 1.3rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--color-five);
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .product-company {
     font-size: 0.9rem;
-    color: #64748b;
-    background: #f1f5f9;
+    color: var(--color-four);
+    background: var(--color-two);
     padding: 4px 8px;
     border-radius: 6px;
     font-weight: 500;
@@ -275,21 +282,21 @@ body {
 
 .detail-label {
     font-size: 0.8rem;
-    color: #64748b;
+    color: var(--color-three);
     margin-bottom: 2px;
     font-weight: 500;
 }
 
 .detail-value {
     font-size: 0.95rem;
-    color: #334155;
+    color: var(--color-five);
     font-weight: 600;
 }
 
 .product-price {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #10b981;
+    color: var(--color-price);
     margin-bottom: 10px;
 }
 
@@ -305,20 +312,20 @@ body {
 }
 
 .stock-high {
-    background: #dcfce7;
-    color: #166534;
+    border: 1px solid var(--color-success-secondary);
+    color: var(--color-success-secondary)
 }
 
 .stock-medium {
-    background: #fef3c7;
-    color: #92400e;
+    border: 1px solid var(--color-alert);
+    color: var(--color-alert);
 }
 
 .stock-low {
-    background: #fee2e2;
-    color: #991b1b;
+    border: 1px solid var(--color-danger);
+    color: var(--color-danger);
 }
-
+/* Parei aqui */
 .product-actions {
     display: flex;
     gap: 10px;
