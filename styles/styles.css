@@ -17,6 +17,7 @@
     --color-price: #2e7d32;
     --color-alert: #f5b453;
     --color-alert-secondary: #ff9800;
+    --color-bg-input: #fafafa;
 }
 
 body {
@@ -317,15 +318,15 @@ body {
 }
 
 .stock-medium {
-    border: 1px solid var(--color-alert);
-    color: var(--color-alert);
+    border: 1px solid var(--color-alert-secondary);
+    color: var(--color-alert-secondary);
 }
 
 .stock-low {
     border: 1px solid var(--color-danger);
     color: var(--color-danger);
 }
-/* Parei aqui */
+
 .product-actions {
     display: flex;
     gap: 10px;
@@ -355,11 +356,10 @@ body {
     max-width: 550px;
     max-height: 90vh;
     overflow: hidden;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
 .modal-header {
-    background: #1e293b;
+    background: var(--color-four);
     color: white;
     padding: 25px;
     display: flex;
@@ -376,7 +376,7 @@ body {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
     padding: 5px;
     border-radius: 4px;
@@ -384,11 +384,11 @@ body {
 }
 
 .close:hover {
-    background: rgba(255,255,255,0.1);
+    transform: scale(1.1)
 }
 
 .modal-body {
-    padding: 30px;
+    padding: 20px;
     max-height: 60vh;
     overflow-y: auto;
 }
@@ -401,28 +401,27 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #374151;
+    color: var(--color-three);
 }
 
 .required {
-    color: #ef4444;
+    color: var(--color-danger);
 }
 
 .form-input {
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--color-three);
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background: #f8fafc;
+    background: var(--color-one);
 }
 
 .form-input:focus {
     outline: none;
-    border-color: #3b82f6;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--color-five);
+    background: var(--color-one);
 }
 
 .photo-upload {
@@ -430,16 +429,16 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    border: 2px dashed #cbd5e1;
+    border: 2px dashed var(--color-three);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: #f8fafc;
+    background: var(--color-bg-input);
 }
 
 .photo-upload:hover {
-    border-color: #3b82f6;
-    background: #eff6ff;
+    border-color: var(--color-five);
+    background: var(--color-bg-input);
 }
 
 .photo-upload.has-image {
@@ -456,7 +455,7 @@ body {
 }
 
 .upload-text {
-    color: #64748b;
+    color: var(--color-three);
     font-size: 14px;
     text-align: center;
     margin-top: 10px;
@@ -475,13 +474,13 @@ body {
 .empty-state {
     text-align: center;
     padding: 80px 20px;
-    color: #64748b;
+    color: var(--color-three);
 }
 
 .empty-state h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #374151;
+    color: var(--color-four);
 }
 
 .empty-state p {
@@ -491,7 +490,7 @@ body {
 
 @media (max-width: 768px) {
     .header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .controls-row {
@@ -512,6 +511,6 @@ body {
     }
 
     .stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 }
