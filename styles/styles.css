@@ -344,6 +344,10 @@ body {
     backdrop-filter: blur(4px);
 }
 
+.active {
+    display: flex;
+}
+
 .modal-content {
     position: absolute;
     top: 50%;
