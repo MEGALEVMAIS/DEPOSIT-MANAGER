@@ -28,7 +28,7 @@
                 <select id="companyFilter" class="filter-select">
                     <option value="">Todas as empresas</option>
                 </select>
-                <button class="btn btn-primary" onclick="openModal()">
+                <button class="btn btn-primary" id="btnNewProduct">
                     ➕ Novo Produto
                 </button>
             </div>
@@ -44,7 +44,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title" id="modalTitle">Adicionar Produto</h2>
-                <button class="close" onclick="closeModal()">×</button>
+                <button class="close" id="btnCloseModal">×</button>
             </div>
             <div class="modal-body">
                 <form id="productForm">
@@ -79,7 +79,7 @@
                             <select id="productSector" class="form-input">
                                 <option value="">Selecione ou digite novo setor</option>
                             </select>
-                            <button type="button" class="btn btn-outline btn-sm" onclick="addNewSector()">
+                            <button type="button" class="btn btn-outline btn-sm" id="btnNewSector">
                                 ➕ Novo
                             </button>
                         </div>
@@ -105,7 +105,7 @@
         </div>
     </div>
 
-    <div id="authModal" class="modal">
+    <!-- <div id="authModal" class="modal">
         <div>
             <label for="name">Nome:</label>
             <input type="text" id="name">
@@ -113,6 +113,7 @@
             <label for="password">Senha:</label>
             <input type="password" name="password" id="password">
         </div>
-    </div>
+    </div> -->
 
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module"></script>
+</body>

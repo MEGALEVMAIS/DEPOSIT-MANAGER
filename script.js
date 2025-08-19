@@ -1,12 +1,37 @@
-let tocken = null;
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  updateDoc,
+  deleteDoc,
+  doc
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-function authentication() {
-    const modal = document.getElementById("authModal")
-    console.log(modal.classList.add("active"))
-}
+const btnNewProduct = document.getElementById("btnNewProduct");
+btnNewProduct.addEventListener('click', () => openModal(-1));
 
-authentication();
+const btnCloseModal = document.getElementById('btnCloseModal');
+btnCloseModal.addEventListener('click', closeModal);
 
+const btnNewSection = document.getElementById('btnNewSector');
+btnNewSection.addEventListener('click', addNewSector)
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB83QOBjY0ExpC53-Ku735OVTSJfe-ZUUo",
+  authDomain: "deposit-manager-ml.firebaseapp.com",
+  projectId: "deposit-manager-ml",
+  storageBucket: "deposit-manager-ml.firebasestorage.app",
+  messagingSenderId: "917790979579",
+  appId: "1:917790979579:web:832d00bb20cad5ab26075e"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let productsNodeEdit = [];
+let productsNodeDelete = [];
 let products = [];
         let sectors = ['Canecas', 'Jarras', 'Copos', 'Pratos', 'Utensílios', 'Decoração', 'Outros'];
         let editingIndex = -1;
@@ -244,10 +269,10 @@ let products = [];
                             </div>
                             
                             <div class="product-actions">
-                                <button class="btn btn-success btn-sm" onclick="openModal(${originalIndex})">
+                                <button class="btn btn-success btn-sm btn-edit">
                                     ✏️ Editar
                                 </button>
-                                <button class="btn btn-danger btn-sm" onclick="deleteProduct(${originalIndex})">
+                                <button class="btn btn-danger btn-sm btn-delete">
                                     🗑️ Excluir
                                 </button>
                             </div>
@@ -255,6 +280,16 @@ let products = [];
                     </div>
                 `;
             }).join('');
+
+            productsNodeEdit = document.querySelectorAll('.btn-edit');
+            productsNodeEdit.forEach((item, index) => {
+                item.addEventListener('click', () => openModal(index));
+            });
+
+            productsNodeDelete = document.querySelectorAll('.btn-delete');
+            productsNodeDelete.forEach((item, index) => {
+                item.addEventListener('click', () => deleteProduct(index));
+            });
         }
 
         // Atualizar estatísticas
