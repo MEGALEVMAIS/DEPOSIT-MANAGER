@@ -20,7 +20,9 @@
             <div class="controls-row">
                 <div class="search-container">
                     <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar produtos ou empresas...">
-                    <span class="search-icon">🔍</span>
+                    <span class="search-icon">
+                        <img src="./assets/search.svg" alt="search icon">
+                    </span>
                 </div>
                 <select id="sectorFilter" class="filter-select">
                     <option value="">Todos os setores</option>
@@ -29,7 +31,8 @@
                     <option value="">Todas as empresas</option>
                 </select>
                 <button class="btn btn-primary" id="btnNewProduct">
-                    ➕ Novo Produto
+                    <img src="./assets/plus.svg" alt="plus icon">
+                    Novo Produto
                 </button>
             </div>
         </div>
@@ -44,7 +47,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title" id="modalTitle">Adicionar Produto</h2>
-                <button class="close" id="btnCloseModal">×</button>
+                <button class="close" id="btnCloseModal">
+                    <img src="./assets/x.svg" alt="X icon">
+                </button>
             </div>
             <div class="modal-body">
                 <form id="productForm">
@@ -53,7 +58,8 @@
                         <input type="file" id="productPhoto" accept="image/*" style="display: none;" required>
                         <div class="photo-upload" id="photoUpload" onclick="document.getElementById('productPhoto').click()">
                             <div class="upload-text">
-                                📸 Clique para adicionar foto<br>
+                                <img src="./assets/camera.svg" alt="camera icon">
+                                Clique para adicionar foto<br>
                                 <small>Formatos aceitos: JPG, PNG, GIF</small>
                             </div>
                         </div>
@@ -80,7 +86,8 @@
                                 <option value="">Selecione ou digite novo setor</option>
                             </select>
                             <button type="button" class="btn btn-outline btn-sm" id="btnNewSector">
-                                ➕ Novo
+                                <img src="./assets/plus.svg" alt="plus icon">
+                                Novo
                             </button>
                         </div>
                     </div>
@@ -97,7 +104,8 @@
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-success" style="width: 100%;">
-                            💾 Salvar Produto
+                            <img src="./assets/save.svg" alt="save icon">
+                            Salvar Produto
                         </button>
                     </div>
                 </form>
