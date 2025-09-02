@@ -18,15 +18,6 @@ btnCloseModal.addEventListener('click', closeModal);
 const btnNewSection = document.getElementById('btnNewSector');
 btnNewSection.addEventListener('click', addNewSector)
 
-const firebaseConfig = {
-  apiKey: "AIzaSyB83QOBjY0ExpC53-Ku735OVTSJfe-ZUUo",
-  authDomain: "deposit-manager-ml.firebaseapp.com",
-  projectId: "deposit-manager-ml",
-  storageBucket: "deposit-manager-ml.firebasestorage.app",
-  messagingSenderId: "917790979579",
-  appId: "1:917790979579:web:832d00bb20cad5ab26075e"
-};
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
