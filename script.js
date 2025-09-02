@@ -118,7 +118,8 @@ let products = [];
             photoUpload.classList.remove('has-image');
             photoUpload.innerHTML = `
                 <div class="upload-text">
-                    📸 Clique para adicionar foto<br>
+                    <img src="./assets/camera.svg" alt="camera icon">
+                    <p>Clique para adicionar foto</p>
                     <small>Formatos aceitos: JPG, PNG, GIF</small>
                 </div>
             `;
@@ -270,10 +271,12 @@ let products = [];
                             
                             <div class="product-actions">
                                 <button class="btn btn-success btn-sm btn-edit">
-                                    ✏️ Editar
+                                    <img src="./assets/pencil.svg" alt="Pencil icon">
+                                    Editar
                                 </button>
                                 <button class="btn btn-danger btn-sm btn-delete">
-                                    🗑️ Excluir
+                                    <img src="./assets/trash.svg" alt="Trash icon">
+                                    Excluir
                                 </button>
                             </div>
                         </div>
